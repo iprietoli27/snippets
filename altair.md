@@ -20,7 +20,7 @@ trend_line = alt.Chart(trends).mark_line().encode(
 ) 
 ```
 
-## Scatter Plot Chart
+## Scatter Plot
 
 ```python
 scatter_countries = alt.Chart(lifecountries).mark_circle().encode(
@@ -31,7 +31,7 @@ scatter_countries = alt.Chart(lifecountries).mark_circle().encode(
 )
 ```
 
-## Map Chart
+## Map
 
 ```python
 temp = world_temp.groupby("city").mean().reset_index() 
@@ -57,7 +57,7 @@ background = alt.Chart(data_geojson_remote).mark_geoshape(
 background+points
 ```
 
-## Histogram Chart
+## Histogram
 
 ```python
 hist_brain = alt.Chart(brain).mark_bar().encode(
@@ -66,25 +66,25 @@ hist_brain = alt.Chart(brain).mark_bar().encode(
 )
 ```
 
-## Composition Horizontal
+## Horizontal Composition
 
 ```python
 trend_bar|trend_line
 ```
 
-## Composition Vertical
+## Vertical Composition
 
 ```python
 trend_bar&trend_line
 ```
 
-## Composition Layer
+## Layer Composition
 
 ```python
 background+points
 ```
 
-## Selection Single
+## Single Selection
 
 ```python
 select_term = alt.selection(type="single",encodings=["x"])
@@ -109,7 +109,7 @@ trend_bar = alt.Chart(trends).mark_bar().encode(
 trend_bar|trend_line
 ```
 
-## Selection interval
+## Interval Selection
 
 ```python
 select_date = alt.selection(type="interval",encodings=["x"])
